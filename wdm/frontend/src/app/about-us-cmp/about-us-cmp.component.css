@@ -1,0 +1,6 @@
+.banner {
+    background-image: url("http://localhost:4200/assets/about-us-banner.JPG"); /*banner.JPG*/
+    padding: 12% 5% 10% 5%;
+    margin-left: 6%;
+    margin-right: 6%;
+}

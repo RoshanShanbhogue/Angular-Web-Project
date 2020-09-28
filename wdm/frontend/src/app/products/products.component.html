@@ -1,0 +1,98 @@
+<h1 class="project-title">GARBAGE DISPOSAL PRODUCTS</h1>
+<div class="container">
+  <div class="grid">
+    
+    <div *ngFor="let product of products">
+      <div class="card-container">
+          <h2 class="card-price"><i class="fa fa-inr currency"></i>{{product.price}}</h2>
+          <h1 class="card-title px-2">{{product.name}}</h1>
+          <p class="details-btn">click to view</p>
+          <div class="card-image-fluid-container">
+            <img src="{{product.img}}" alt="" />
+          </div>
+          <i class="fa fa-cart-plus cart-btn"></i>
+      </div>
+    </div>
+
+    <!-- <div class="card-container">
+      <h2 class="card-price"><i class="fa fa-inr currency"></i>3500</h2>
+      <h1 class="card-title px-2">TWIN BIN DRY & WASTE (20 Ltrs)</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-container">
+        <img src="http://localhost:4200/assets/Twin-Bin-Dry-and-Wet-Waste-Dustbin-20-litres.jpg" alt="" />
+      </div>
+      <i class="fa fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><i class="fa fa-inr currency"></i>5800</h2>
+      <h1 class="card-title px-2">TRASH CAN WITH WHEELS AND LID</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-fluid-container">
+        <img src="http://localhost:4200/assets/Wheel-Waste-Bins-with-Pedal.png" alt="" />
+      </div>
+      <i class="fa fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><i class="fa fa-inr currency"></i>10750</h2>
+      <h1 class="card-title px-2">INDUSTRIAL DUMPSTER (1200 Ltrs)</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-fluid-container">
+        <img src="http://localhost:4200/assets/industrial-dumpster.jpg" alt="" />
+      </div>
+      <i class="fa fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><i class="fa fa-inr currency"></i>1490</h2>
+      <h1 class="card-title ">STAINLESS STEEL BIN</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-fluid-container">
+        <img src="http://localhost:4200/assets/stainless-steel-bin.jpg" alt="" />
+      </div>
+      <i class="fa fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><i class="fa fa-inr currency"></i>15520</h2>
+      <h1 class="card-title">FORKLIFT TRASH HOPPER</h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-fluid-container">
+        <img src="http://localhost:4200/assets/trash-hopper.jpg" alt="" />
+      </div>
+      <i class="fa fa-cart-plus cart-btn"></i>
+    </div>
+
+    <div class="card-container">
+      <h2 class="card-price"><i class="fa fa-inr currency"></i>75680</h2>
+      <h1 class="card-title">INDUSTRIAL TRASH DUMPSTER (15 Yard) </h1>
+      <p class="details-btn">click to view</p>
+      <div class="card-image-fluid-container">
+        <img src="http://localhost:4200/assets/industrial-trash-dusmpter.jpg" alt="" />
+      </div>
+      <i class="fa fa-cart-plus cart-btn"></i>
+    </div> -->
+
+  </div>
+
+  <div class="mt-4">
+      <mat-paginator [length]="length"
+        [pageSize]="pageSize"
+        [pageSizeOptions]="pageSizeOptions"
+        (page)="pageEvent = $event">
+    </mat-paginator>
+  
+    <!-- <div *ngIf="pageEvent">
+      <h5>Page Change Event Properties</h5>
+      <div>List length: {{pageEvent.length}}</div>
+      <div>Page size: {{pageEvent.pageSize}}</div>
+      <div>Page index: {{pageEvent.pageIndex}}</div>
+    </div> -->
+  
+  </div>
+  
+
+</div>
+
+<!-- here is where the other part starts-->

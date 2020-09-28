@@ -1,0 +1,27 @@
+.example-card {
+  max-width: 400px;
+  margin-bottom: 3%;
+}
+
+.example-header-image {
+  background-image: url('http://localhost:4200/assets/go-green.png');
+  background-size: cover;
+}
+
+.my-card-content {
+  padding-top: 43%;
+  padding-bottom: 43%;
+  color: red;
+  font-family: sans-serif;
+}
+
+img{
+  width: 400px;
+  height: 250px;
+}
+
+.content-body {
+  font: 1em 'Inter Regular' Arial, sans-serif; 
+  color: #67696D; 
+  text-align: justify;
+}

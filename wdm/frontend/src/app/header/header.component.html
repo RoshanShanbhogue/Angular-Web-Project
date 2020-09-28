@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg p-3 mb-5 ml-5 mr-5 bg-white rounded">
+  <a class="navbar-brand" [routerLink]="['/']">{{BrandName}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/service']">Service</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/products']">Products</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="['/about']">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/why-choose-us']">WhyChooseUs?</a>
+      </li>
+    </ul>
+  </div>
+  <a class="btn btn-outline-primary" [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()" [routerLink]="['/login']">{{name}}</a>
+  <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <span (mouseleave)="menuTrigger.closeMenu()">
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span [routerLink]="['/login']">My Account</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>trending_up</mat-icon>
+        <span>My Pickups</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/contact-us']">
+        <mat-icon>contact_support</mat-icon>
+        <span>Support</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </span>
+  </mat-menu>
+</nav>

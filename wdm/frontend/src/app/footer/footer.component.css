@@ -1,0 +1,20 @@
+.indigo{
+    background-color: #303f9f ;
+    color: azure;
+    font-size: 0.9em;
+}
+.rgba-white-light{
+    border-color: rgba(255, 255, 255, 0.445);
+}
+a[href]{
+    color: whitesmoke;
+    font-size: 0.9em;
+}
+.indigo-dark{
+    background-color: #1a237e;
+}
+
+.margin-space {
+    margin: 1.2%;
+    margin-bottom: 2%;
+}

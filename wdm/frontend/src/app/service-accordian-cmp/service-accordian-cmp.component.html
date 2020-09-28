@@ -1,0 +1,111 @@
+<div class="shadow-lg p-3 mb-4 bg-white rounded">
+    <ul>
+        <li (click)='selectedPanel="Section1"' [class.active]="selectedPanel=='Section1'">
+            <div class="section-title">
+                <p><i class="fa fa-usd icons" style="font-size: 2.5em;"></i><br><br>Pay My<br> Bill</p>
+            </div>
+            <div class="section-content">
+                <h2><span style="font-size: 2em;">&#36;</span><span class=" pl-2" style="font-size: 1.5em; color: black; "> PAY MY BILL</span></h2>
+                <h6 style="color: black; font-weight: 800;">PLEASE LOG IN, SIGN UP, OR MAKE ONE TIME PAYMENT</h6>
+
+                <div>
+                    <mat-horizontal-stepper [linear]="isLinear" #stepper>
+                        <mat-step [stepControl]="firstFormGroup">
+                            <form [formGroup]="firstFormGroup">
+                            <ng-template matStepLabel>Enter Credentials</ng-template>
+                            <mat-form-field>
+                                <input matInput placeholder="Email" formControlName="email" required>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input matInput placeholder="Password" formControlName="password" required>
+                            </mat-form-field>
+                            <div>
+                                <button mat-button matStepperNext>Next</button>
+                            </div>
+                            </form>
+                        </mat-step>
+                        <mat-step [stepControl]="secondFormGroup">
+                            <form [formGroup]="secondFormGroup">
+                            <ng-template matStepLabel>Fill out your address</ng-template>
+                            <mat-form-field>
+                                <input matInput placeholder="Address" formControlName="address" required>
+                            </mat-form-field>
+                            <div>
+                                <button mat-button matStepperPrevious>Back</button>
+                                <button mat-button matStepperNext>Next</button>
+                            </div>
+                            </form>
+                        </mat-step>
+                        <mat-step>
+                            <ng-template matStepLabel>Done</ng-template>
+                            You are now done.
+                            <div>
+                                <button mat-button matStepperPrevious>Back</button>
+                                <button mat-button (click)="stepper.reset()">Reset</button>
+                                <div class="mt-5" style="font-weight: 600; color: black;">
+                                    <h5 class="pb-3 pt-3 pl-1" style="font-size: 1em; ">ONLINE BILL PAY &gt;</h5>
+                                    <h5 class="pb-3 pl-1" style="font-size: 1em;">VIEW PICKUP SCHEDULE &gt;</h5>
+                                    <h5 class="pb-3 pl-1" style="font-size: 1em;">MAKE PAYMENT &gt;</h5>
+                                </div>
+                            </div>
+                        </mat-step>
+                    </mat-horizontal-stepper>
+                </div>
+
+            </div>
+        </li>
+        <li (click)='selectedPanel="Section2"' [class.active]="selectedPanel=='Section2'">
+            <div class="section-title">
+            <p><i class="fa fa-calendar icons" style="font-size: 2.5em;"></i><br><br>Schedule Pickups</p>
+            </div>
+            <div class="section-content">
+                <h2><i class="fa fa-calendar icons" style="font-size: 2em;"></i><span class=" pl-2" style="font-size: 1.5em; color: black; "> Schedule Pickups</span></h2>
+                <h6 style="color: black; font-weight: 800;">SCHEDULE TRASH PICKUP FROM YOUR PREMISE</h6>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                      
+            </div>
+        </li>
+        <li (click)='selectedPanel="Section3"' [class.active]="selectedPanel=='Section3'">
+            <div class="section-title">
+            <p><span class="iconify" data-icon="ic-baseline-sms-failed" data-inline="false" style="font-size: 2.5em;"></span><br><br> Request Services</p>
+            </div>
+            <div class="section-content">
+                <h2><span class="iconify" data-icon="ic-baseline-sms-failed" data-inline="false" style="font-size: 2.5em;"></span><span class=" pl-2" style="font-size: 1.5em; color: black; ">Request Services</span></h2>
+                <div style="text-align: justify;">
+                    <h6 class="pb-5" style="color: black; font-weight: 800; font-size: 1.3em;">WITH A VARIETY OF PICKUP, REPAIR, AND ORDERING OPTIONS, WE MAKE IT EASY TO GET CONVENIENT AND RELIABLE SERVICE</h6>
+                    <p class="pb-5" style="color: black; font-size: 1.3em;" >Whether you're disposing of one desk, in need of a container repair, or want to order a new dumpster, use these forms to reach us directly. It's that simple.</p>
+                    <div style="font-size: 1.2em; font-weight: 600;">
+                        <p class="pb-3">REQUEST BULK PICKUP &gt;</p>
+                        <p class="pb-3">REQUEST EXTRA PICKUP &gt;</p>
+                        <p class="pb-3">ORDER TEMPORARY DUMPSTER &gt;</p>
+                        <p class="pb-3">REQUEST CONTAINER REPAIR &gt;</p>
+                        <p class="pb-3">NOTIFY US OF A MISSED PICKUP &gt;</p>
+                    </div>
+                </div>   
+                
+            </div>
+        </li>
+        <li (click)='selectedPanel="Section4"' [class.active]="selectedPanel=='Section4'">
+            <div class="section-title">
+            <p><i class="fa fa-map-marker" style="font-size: 2.5em;"></i><br><br>Drop Off Location</p>
+            </div>
+            <div class="section-content">
+                <h2><i class="fa fa-map-marker" style="font-size: 2.5em;"></i><span class=" pl-2" style="font-size: 1.5em; color: black;"> DROP OFF LOCATION</span></h2>
+                <div style="font-size: 1.5em; font-weight: 500; color: black; padding-left: 10%;">Recycle <mat-slide-toggle color="warn">Trash Disposal</mat-slide-toggle></div>
+                <div style="padding-left: 10%;">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>Disposal Zones</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="https://www.google.com/maps/d/thumbnail?mid=1r0usdFXC5pwNrBDQhaPod_yXfAw" alt="Bangalore Map Trash Points">
+                    </mat-card>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
